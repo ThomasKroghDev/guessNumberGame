@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>guess the number</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="resetBtnContainer">
+        <button class="button reset">reset</button>
+      </div>
+      <div class="secretContainer"><span class="secretNumber">?</span></div>
+      <div class="contentBox">
+        <div class="inputBox">
+          <label for="number">Enter your number</label>
+          <input type="number" name="number" id="number" class="number" />
+          <button class="button check">check your answer</button>
+        </div>
+        <div class="resultBox">
+          <div class="message">start guessing!</div>
+          <div>your score: <span class="score">20</span></div>
+          <div>high score: <span class="highScore">0</span></div>
+        </div>
+      </div>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>

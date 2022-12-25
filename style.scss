@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+$body-bg: #481868;
+$boxBody-bg: #683090;
+$numberField-bg: #a070c8;
+$wrongMessageColor: #a80010;
+$correctMessageColor: #ffa800;
+$scoreColor: #ff7000;
+$high-scoreColor: #a8e038;
+$boxBorderThickness: 3px;
+$btn-bg: #902068;
+$textColor: #e0d0ff;
+$font: 'Press Start 2P', cursive;
+
+body {
+  background-color: $body-bg;
+  color: $textColor;
+  font-family: $font;
+}
+
+main {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto auto;
+}
+.resetBtnContainer {
+  margin-right: auto;
+}
+.secretContainer {
+  margin: 120px;
+
+  .secretNumber {
+    background-color: $textColor;
+    color: $btn-bg;
+    padding: 40px 40px;
+    border: $boxBorderThickness solid black;
+  }
+}
+
+.contentBox {
+  display: flex;
+  width: 75vw;
+  justify-content: space-evenly;
+
+  .inputBox {
+    display: flex;
+    flex-direction: column;
+    background-color: $boxBody-bg;
+    border: $boxBorderThickness solid black;
+    padding: 20px;
+
+    .number {
+      padding: 10px;
+      font-family: $font;
+      border: $boxBorderThickness solid black;
+      &:focus {
+        outline: none;
+      }
+      background-color: $numberField-bg;
+      color: $textColor;
+    }
+
+    > * {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.resultBox {
+  padding: 20px;
+  background-color: $boxBody-bg;
+  border: $boxBorderThickness solid black;
+  .score {
+    color: $scoreColor;
+  }
+  .highScore {
+    color: $high-scoreColor;
+  }
+  > * {
+    margin-bottom: 20px;
+  }
+}
+
+.button {
+  border: $boxBorderThickness solid black;
+  padding: 10px;
+  font-family: $font;
+  background-color: $btn-bg;
+  color: $textColor;
+
+  &:disabled {
+    color: $boxBody-bg;
+    background-color: gray;
+    border: $boxBorderThickness solid rgb(41, 41, 41);
+    text-decoration: solid line-through black 2px;
+  }
+}
